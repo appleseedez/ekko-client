@@ -1,4 +1,4 @@
-import { app,screen } from 'electron'
+import { app,screen,ipcMain} from 'electron'
 import window from 'electron-window'
 import { WindowConfig } from './config/window-config'
 import _ from 'lodash'
@@ -21,12 +21,15 @@ app.on('ready',()=>{
   const LoginWindow = window.createWindow(loginCfg)
 
   let someArgs = { data: 'this data can be seen in the opening window' }
+  ipcMain.on("LoginSuccess",(evt,arg)=>{
+    LoginWindow.hide()
+    MainWindow.show()
+  })
   MainWindow.showUrl(WindowConfig['main'].path,{},()=>{
-    // MainWindow.hide()
-    MainWindow.webContents.openDevTools()
+    MainWindow.hide()
+    LoginWindow.webContents.openDevTools()
     LoginWindow.showUrl(WindowConfig['login'].path, someArgs, () => {
       LoginWindow.center()
-
     })
   })
   // MainWindow.webContents.openDevTools()
