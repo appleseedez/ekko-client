@@ -7,8 +7,11 @@
     <title>mode</title>
     <link href="assets/css/font-awesome.css" rel="stylesheet">
     <link href="assets/css/app.css" rel="stylesheet">
-    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <link href="assets/css/tree-view.css" rel="stylesheet">
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="assets/vendors/jquery.nicescroll.min.js"></script>
+    <script>if (window.module) module = window.module;</script>
   </head>
   <body>
     <div class="shell-content-mb">
@@ -45,7 +48,9 @@
                   </div>
                 </div>
                 <div class="main-box">
-                  <div class="content-box"></div>
+                  <div class="content-box">
+                    <div id='J_LeftTree'></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -62,7 +67,40 @@
                   </div>
                 </div>
                 <div class="main-box">
-                  <div class="content-box"></div>
+                  <div class="content-box" id='J_AlertChart'>
+                  </div>
+                  <div class="content-box" style="display:none;">
+                    <div class="table-box">
+                      <div class="table-content">
+                        <table>
+                          <tr>
+                            <th>告警级别</th>
+                            <th>报警总数</th>
+                          </tr>
+                          <tr>
+                            <td>合计</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td>低门限</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td>高门限</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td>超低门限</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td>超高门限</td>
+                            <td>1</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -73,173 +111,7 @@
                 <div class="content-box"></div>
               </div>
             </div>
-            <div class="bot-box">
-              <div class="information-box">
-                <div class="tab-box">
-                  <div class="item sel">
-                    <i></i>
-                    <span>实时告警</span>
-                  </div>
-                  <div class="item">
-                    <i></i>
-                    <span>消息栏</span>
-                  </div>
-                  <div class="item">
-                    <i></i>
-                    <span>属性</span>
-                  </div>
-                </div>
-                <div class="main-box">
-                  <div class="content-box waring-box">
-                    <ul class="action-box">
-                      <li class="model">
-                        <i class="fa fa-table"></i>
-                      </li>
-                      <li class="filter">
-                        <i class="fa fa-check"></i>
-                        <span>紧急</span>
-                      </li>
-                      <li class="filter">
-                        <i class="fa fa-check"></i>
-                        <span>严重</span>
-                      </li>
-                      <li class="filter close">
-                        <i class="fa fa-close"></i>
-                        <span>普通</span>
-                      </li>
-                    </ul>
-                    <div class="table-tit">
-                      <table>
-                        <tr>
-                          <th>告警序号</th>
-                          <th>告警类型</th>
-                          <th>告警级别</th>
-                          <th>发生时间</th>
-                          <th>设备</th>
-                          <th>IP</th>
-                          <th>备注</th>
-                          <th>操作</th>
-                        </tr>
-                        <tr>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                        </tr>
-                      </table>
-                    </div>
-                    <div class="table-content J_scroll_01">
-                      <table>
-                        <tr class="hide">
-                          <th>告警序号</th>
-                          <th>告警类型</th>
-                          <th>告警级别</th>
-                          <th>发生时间</th>
-                          <th>设备</th>
-                          <th>IP</th>
-                          <th>备注</th>
-                          <th>操作</th>
-                        </tr>
-                        <tr>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                        </tr>
-                        <tr>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                        </tr>
-                        <tr>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                        </tr>
-                        <tr>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                        </tr>
-                        <tr>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                          <td>null</td>
-                        </tr>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="content-box message-box" style="display:none;">
-                    <ul class="message-list J_scroll_01">
-                      <li><p>欢迎使用本系统：2016-12-04&nbsp;13:20:45</p></li>
-                      <li><p>欢迎使用本系统：2016-12-04&nbsp;13:20:45</p></li>
-                      <li><p>欢迎使用本系统：2016-12-04&nbsp;13:20:45</p></li>
-                      <li><p>欢迎使用本系统：2016-12-04&nbsp;13:20:45</p></li>
-                      <li><p>欢迎使用本系统：2016-12-04&nbsp;13:20:45</p></li>
-                      <li><p>欢迎使用本系统：2016-12-04&nbsp;13:20:45</p></li>
-                      <li><p>欢迎使用本系统：2016-12-04&nbsp;13:20:45</p></li>
-                      <li><p>欢迎使用本系统：2016-12-04&nbsp;13:20:45</p></li>
-                      <li><p>欢迎使用本系统：2016-12-04&nbsp;13:20:45</p></li>
-                      <li><p>欢迎使用本系统：2016-12-04&nbsp;13:20:45</p></li>
-                    </ul>
-                  </div>
-                  <div class="content-box attr-box" style="display:none;">
-                    <div class="table-tit">
-                      <table>
-                        <tr>
-                          <th>属性</th>
-                          <th>值</th>
-                        </tr>
-                        <tr>
-                          <td>属性名称</td>
-                          <td>qq</td>
-                        </tr>
-                      </table>
-                    </div>
-                    <div class="table-content J_scroll_01">
-                      <table>
-                        <tr class="hide">
-                          <th>属性</th>
-                          <th>值</th>
-                        </tr>
-                        <tr>
-                          <td>属性名称</td>
-                          <td>qq</td>
-                        </tr>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div id='J_AlertList'></div>
           </div>
         </div>
         <div class="home-footer">
@@ -252,16 +124,8 @@
       </div>
     </div>
     <script type="text/javascript">
-        $('.J_scroll_01').niceScroll({
-            background: "#ddd",
-            cursorcolor: "#aaa",//#CC0071 光标颜色
-            cursoropacitymin:0.3,
-            cursoropacitymax: 0.7, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
-            cursorwidth: "7px", //像素光标的宽度
-            cursorborder: "0", //     游标边框css定义
-            cursorborderradius: "0px",//以像素为光标边界半径
-            autohidemode: "leave",//是否隐藏滚动条
-        });
+    require('babel-register')
+    require('../render/main.js')
     </script>
   </body>
 </html>

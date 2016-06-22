@@ -19,13 +19,18 @@
             float: left;
             height: 26px;
             margin-right: 16px;
-            padding-left: 30px;
+            padding-left: 35px;
+            padding-right: 5px;
             line-height: 26px;
             cursor: pointer;
+            border-radius: 3px;
+            &:hover{
+                background-color: #e5e5e5;
+            }
         }
         .ico-box{
             position: absolute;
-            left: 0;
+            left: 5px;
             top: 0;
             width: 26px;
             height: 26px;
@@ -121,6 +126,13 @@
                 height: ~'calc(100% - 2px)';
                 border: 1px solid #e5e5e5;
             }
+        }
+        .chart-box{
+            height:100%;
+        }
+        .table-box{
+            padding-top: 20px;
+            .table-scroll-1-mb(100%);
         }
     }
     .topology-box{
@@ -345,7 +357,7 @@
         margin-bottom: 15px;
     }
     .set-pop-box{
-        padding: 100px 40px 40px; 
+        padding: 60px 40px 40px; 
         display: inline-block;
         .form-list{
             display: inline-block;
@@ -454,7 +466,15 @@
                 }
             }            
         }
-
+        &.lan-segment{
+            .rem{
+                text-align: center;
+                span{
+                    display: inline-block;
+                    width: 330px;
+                }
+            }
+        }
     }
     .waring-pop-box{
         padding:20px 50px;
@@ -477,6 +497,7 @@
     }
     .login-box{
         width: 500px;
+        padding-bottom: 40px;
         text-align: center;
         h1{
             padding-top: 30px;
@@ -491,6 +512,187 @@
         .btn-box{
             .btn{
                 .btn-01-mb(30px;30px)
+            }
+        }
+    }
+    .nav-pop-box{
+        padding: 20px; 
+        display: inline-block;
+        .rig-btn-box{
+            padding-top: 20px;
+            text-align: right;
+            .btn{
+                .btn-01-mb(24px;10px);
+                margin-left: 10px;
+            }            
+        }
+        .form-list{
+            display: inline-block;
+            .form-list-1-mb(30px;80px;300px;20px);
+            .input-c6{
+                .item{
+                    float: left;
+                    height: 30px;
+                    width: 18px;
+                    text-align: center;
+                    line-height: 30px;
+                }
+                input{
+                    text-align: center;
+                    width: 29px !important;
+                    padding:0 2px !important;
+                }
+            }
+            .input-c4{
+                .item{
+                    float: left;
+                    height: 30px;
+                    width: 20px;
+                    text-align: center;
+                    line-height: 30px;
+                }
+                input{
+                    text-align: center;
+                    width: 54px !important;
+                    padding:0 2px !important;
+                }
+            }
+            .select-box{
+                select{
+                    width:100%;
+                    height: 30px;
+                    border-color: #ccc;
+                    text-align: center; 
+                }
+            }
+            .unit-box{
+                input{
+                    width: 240px !important;
+                }
+                .unit{
+                    display: inline-block;
+                    width: 38px;
+                    text-align: center;
+                }
+            }
+            .radio-box{
+                input[type="radio"]{
+                    height: 16px;
+                    width: 16px;
+                    cursor: pointer;
+                    vertical-align: middle;
+                }
+                label{
+                    padding-right: 80px;
+                }
+            }
+            .input-time{
+                .item{
+                    float: left;
+                    height: 30px;
+                    width: 40px;
+                    text-align: center;
+                    line-height: 30px;
+                }
+                input{
+                    text-align: center;
+                    width: 124px !important;
+                    padding:0 2px !important;
+                }
+            }
+            .check-box{
+                input[type="checkbox"]{
+                    height: 16px;
+                    width: 16px;
+                    cursor: pointer;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .col2-box{
+            width: 960px;
+            overflow: hidden;
+            .form-list{
+                .form-list-1-mb(24px;90px;380px;10px);
+                float: left;
+                .select-box{
+                    select{
+                        height: 24px;
+                    }
+                }
+                &:first-child{
+                    margin-right: 20px;
+                }                    
+            }
+        }
+        .action-box{
+            padding-top: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 24px;
+            border-top: 1px solid #ccc;
+            .action-btn{
+                float: left;
+                .btn{
+                    .btn-01-mb(24px;10px);
+                    margin-right: 5px;
+                }                
+            }
+            .page-action{
+                float: right;
+                .btn{
+                    padding-right: 10px;
+                    cursor: pointer;
+                    &:hover{color: #4078c0;}
+                    &.dk{
+                        color: #999;
+                        &:hover{color: #999;}
+                    }
+                }
+                .input{
+                    .form-mb(24px);
+                    margin-right: 5px;
+                    width: 30px;
+                    text-align: center;
+                }
+            }
+        }
+        &.user-manage{
+            width: 820px;
+            .table-scroll-1-mb(400px);
+            .table-box{
+                border: 1px solid #ccc;
+            }
+        }
+        &.device-search{
+            .table-scroll-1-mb(300px);
+            .table-tit{
+                width: 100%;
+            }
+            .table-box{
+                border: 1px solid #ccc;
+            }
+        }
+        &.online-count{
+            width: 780px;
+            .tab-box{
+                .tab-1-mb();
+            }
+            .main-box{
+                padding-top: 31px;
+                height: 400px;
+            }
+            .content-box{
+                border: 1px solid #e5e5e5;                
+                height: 400px;
+            }
+            .action-box{
+                padding: 5px 20px;
+                border-top: 0;
+            }
+            .table-scroll-1-mb(345px);
+            .chart-box{
+                height: 100%;
             }
         }
     }
