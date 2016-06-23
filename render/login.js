@@ -9,8 +9,8 @@ ReactDOM.render(<LoginView />, document.getElementById('root'));
 
 
 API.doPost('/api/Users/login',{
-  email:'appleseedez@gmail.com',
-  password:'bcd'
+  email:'appleseedez@163.com',
+  password:'hello1234'
 })
 .then(res=>{
   return res.json()

@@ -24,10 +24,11 @@ app.on('ready',()=>{
   ipcMain.on("LoginSuccess",(evt,arg)=>{
     LoginWindow.hide()
     MainWindow.show()
+    MainWindow.webContents.openDevTools()
   })
   MainWindow.showUrl(WindowConfig['main'].path,{},()=>{
     MainWindow.hide()
-    LoginWindow.webContents.openDevTools()
+
     LoginWindow.showUrl(WindowConfig['login'].path, someArgs, () => {
       LoginWindow.center()
     })
